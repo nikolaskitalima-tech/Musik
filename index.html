@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Musik</title>
+        <style>
+            header{
+                background-color: rgb(37, 38, 85);
+                color: white;
+                text-align: center;
+                max-width: 800px;
+                margin: 0 auto;
+                padding: 16px;
+                border: 5px solid black;
+            }
+            main{
+                background-color: white;
+                color: rgb(37, 38, 85);
+                max-width: 800px;
+                margin: 0 auto;
+                padding: 16px;
+            }
+            img{
+                width: 200px;
+                height: 200px;
+            }
+            .album-name{
+                font-weight: bold;
+            }
+            div1{
+                display: flex;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Musik</h1>
+            <p>Aqui vou compartilhar um pouco do meu gosto musical!</p>
+        </header>
+        <main>
+            <article>
+                <h2>Meus albuns favoritos</h2>
+                <div1><img src="Scarlet-DojaCat.png" alt="*Capa do álbum 'Scarlet' de Doja Cat*">
+                     <div><p class="album-name">Scarlet - Doja Cat</p>
+                         <p>Scarlet é o quarto álbum de estúdio da rapper e cantora estadunidense Doja Cat,
+                            lançado em 22 de setembro de 2023, através da Kemosabe e RCA Records.
+                            Inspirada pela sua desilusão com a música pop e insatisfação com críticos musicais 
+                            questionando seu status como rapper, Doja Cat decidiu criar uma sequência "masculina" 
+                            para seu terceiro álbum de estúdio, Planet Her (2021). Musicalmente,
+                            o álbum é predominantemente centrado nos gêneros de hip hop e R&B,
+                            marcando uma leve mudança em relação aos sons pop do seu antecessor.</p>
+                        <button>❤️ <span>0</span></button>
+                        <button>👎 <span>0</span></button>
+                    </div>
+                </div1>
+            </article>
+            
+            <article>
+                <div1><img src="FutureNostalgia-DuaLipa.png" alt="*Capa do álbum 'Future Nostalgia' de Dua Lipa*">
+                     <div><p class="album-name">Future Nostalgia - Dua Lipa</p>
+                         <p>Future Nostalgia é o segundo álbum de estúdio da cantora britânica-albanesa Dua Lipa, 
+                            lançado em 27 de março de 2020 através da Warner Records. O processo de gravação começou 
+                            em janeiro de 2018, recrutando compositores e produtores como Jeff Bhasker, Ian Kirkpatrick, 
+                            Stuart Price, Danja, The Monsters e Strangerz, entre outros. Em termos musicais, 
+                            Lipa descreveu o álbum como "uma aula de dança", onde o projeto é marcado pelos gêneros pop, 
+                            disco, synthpop, electropop, house, funk, new wave, techno e EDM, com inspirações nos estilos 
+                            musicais nas décadas de 1970, 1980 e 1990, trazendo um som "futurista" e "nostálgico".</p>
+                        <button>❤️ <span>0</span></button>
+                        <button>👎 <span>0</span></button>
+                    </div>
+                </div1>
+            </article>
+        </main>
+    </body>
+    <script>
+        const botoes = document.querySelectorALL("button");
+
+        botoes.forEach( function(botao){
+            botao.addEventListener("click", botaoClicado);
+            function botaoClicado(){
+                console.log("fui clicado");
+                let texto = botao.querySelector("span");
+                texto.textContent++;
+            }
+        })
+    </script>
+</html>
